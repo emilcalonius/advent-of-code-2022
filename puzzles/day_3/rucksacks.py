@@ -1,7 +1,7 @@
 import math
 import re
 
-# PART 1.
+# ----------------------------- PART 1. ------------------------------------
 sum = 0
 with open("rucksacks.txt", "r") as file:
     for line in file:
@@ -23,13 +23,15 @@ with open("rucksacks.txt", "r") as file:
                     sum += ord(char) - ord("A") + 27
 print(sum)
 
-# PART 1.
+# --------------------------------- PART 2. ----------------------------------
 sum = 0
 group = []
 with open("rucksacks.txt", "r") as file:
     for line in file:
+        # Remove duplicate letters, remove trailing newline and add to list
         group.append("".join(set(line.rstrip("\n"))))
 
+        # Once list has 3 lines, find the common letter
         if len(group) == 3:
             for char in group[1]:
                 if char in group[0] and char in group[1] and char in group[2]:
@@ -37,5 +39,6 @@ with open("rucksacks.txt", "r") as file:
                         sum += ord(char) - ord("a") + 1
                     elif bool(re.search("[A-Z]", char)):
                         sum += ord(char) - ord("A") + 27
+            # Clar list to move on to next group
             group.clear()
 print(sum)
