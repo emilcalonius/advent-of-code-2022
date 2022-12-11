@@ -1,15 +1,3 @@
-"""
-Elves are carrying snacks on their expedition. The amount of calories carried by each elf
-can be found in a text file. Each elf can carry multiple items and the elves' inventories are
-separated by an empty row.
-
-Part 1.
-Find the elf carrying most calories. 
-
-Part2.
-Find top three elves based on how many calories they are carrying
-"""
-
 # Read file and add each elf's total calories into a list
 calories_arr = []
 calories = 0
