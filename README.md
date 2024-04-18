@@ -1,2 +1,5 @@
-# advent-of-code-2022
-My advent of code solutions for 2022
+# advent-of-code 🎄
+
+My advent of code solutions.
+
+https://adventofcode.com/
